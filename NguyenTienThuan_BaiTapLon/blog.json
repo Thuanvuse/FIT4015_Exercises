@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Bí quyết dưỡng da cho ngày hè",
+        "summary": "Học cách chăm sóc da vào mùa hè để luôn rạng rỡ.",
+        "image": "https://example.com/duong-da.jpg",
+        "link": "blog-post1.html"
+    },
+    {
+        "title": "5 mẹo trang điểm tự nhiên",
+        "summary": "Cách trang điểm nhẹ nhàng giúp bạn luôn tự tin.",
+        "image": "https://example.com/trang-diem.jpg",
+        "link": "blog-post2.html"
+    },
+    {
+        "title": "Thói quen giúp tóc chắc khỏe",
+        "summary": "Những thói quen hàng ngày giúp tóc bạn luôn mềm mượt.",
+        "image": "https://example.com/toc-khoe.jpg",
+        "link": "blog-post3.html"
+    }
+]
