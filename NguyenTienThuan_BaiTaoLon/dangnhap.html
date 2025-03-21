@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng Nhập</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Đăng Nhập</h2>
+        <div class="card p-4">
+            <label>Email:</label>
+            <input type="email" id="email" class="form-control">
+            
+            <label class="mt-2">Mật khẩu:</label>
+            <input type="password" id="password" class="form-control">
+            
+            <button class="btn btn-primary mt-3 w-100" onclick="login()">Đăng Nhập</button>
+            <button class="btn btn-secondary mt-2 w-100" onclick="register()">Đăng Ký</button>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let user = JSON.parse(localStorage.getItem("user"));
+
+            if (user && user.email === email && user.password === password) {
+                alert("Đăng nhập thành công!");
+                window.location.href = "thanhtoan.html"; // Quay về trang thanh toán
+            } else {
+                alert("Sai tài khoản hoặc mật khẩu!");
+            }
+        }
+
+        function register() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            if (!email || !password) {
+                alert("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
+            localStorage.setItem("user", JSON.stringify({ email, password }));
+            alert("Đăng ký thành công! Hãy đăng nhập.");
+        }
+    </script>
+</body>
+</html>
